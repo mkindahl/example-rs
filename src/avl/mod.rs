@@ -12,24 +12,8 @@
 // implied.  See the License for the specific language governing
 // permissions and limitations under the License.
 
-#[macro_use]
-extern crate criterion;
-extern crate examples;
+pub mod tree;
 
-use examples::avl;
-use criterion::Criterion;
+pub use tree::*;
 
-fn inserts(n: u32) {
-    use avl::tree::Tree;
-    let mut tree = Tree::new();
-    for i in 1..n {
-        tree.insert(i, i * i);
-    }
-}
 
-fn bench_inserts(c: &mut Criterion) {
-    c.bench_function("avl_inserts 1000", |b| b.iter(|| inserts(1000)));
-}
-
-criterion_group!(benches, bench_inserts);
-criterion_main!(benches);

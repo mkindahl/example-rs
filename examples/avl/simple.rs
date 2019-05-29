@@ -12,24 +12,22 @@
 // implied.  See the License for the specific language governing
 // permissions and limitations under the License.
 
-#[macro_use]
-extern crate criterion;
-extern crate examples;
+extern crate data_structures;
 
-use examples::avl;
-use criterion::Criterion;
+use data_structures::avl::Tree;
 
-fn inserts(n: u32) {
-    use avl::tree::Tree;
+fn main() {
     let mut tree = Tree::new();
-    for i in 1..n {
+    for i in 1..11 {
         tree.insert(i, i * i);
+        println!("After inserting {}", i);
+        tree.pretty();
+        tree.insert(2 * 11 - i, i * i * i);
+        println!("After inserting {}", 2 * 11 - i);
+        tree.pretty();
+    }
+
+    for i in 1..11 {
+        println!("Searching for {} gave {:?}", i, tree.find(i));
     }
 }
-
-fn bench_inserts(c: &mut Criterion) {
-    c.bench_function("avl_inserts 1000", |b| b.iter(|| inserts(1000)));
-}
-
-criterion_group!(benches, bench_inserts);
-criterion_main!(benches);

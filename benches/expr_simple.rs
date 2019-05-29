@@ -16,20 +16,15 @@
 extern crate criterion;
 extern crate examples;
 
-use examples::avl;
 use criterion::Criterion;
+use examples::expr::eval;
+use std::collections::HashMap;
 
-fn inserts(n: u32) {
-    use avl::tree::Tree;
-    let mut tree = Tree::new();
-    for i in 1..n {
-        tree.insert(i, i * i);
-    }
+fn bench_simple(c: &mut Criterion) {
+    c.bench_function("expr_simple", |b| {
+        b.iter(|| eval("3+3*5/(3*3)", &HashMap::new()))
+    });
 }
 
-fn bench_inserts(c: &mut Criterion) {
-    c.bench_function("avl_inserts 1000", |b| b.iter(|| inserts(1000)));
-}
-
-criterion_group!(benches, bench_inserts);
+criterion_group!(benches, bench_simple);
 criterion_main!(benches);
