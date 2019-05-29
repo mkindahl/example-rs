@@ -14,7 +14,7 @@
 
 #[macro_use]
 extern crate criterion;
-extern crate data_structures;
+extern crate examples;
 
 use data_structures::avl;
 use criterion::Criterion;
