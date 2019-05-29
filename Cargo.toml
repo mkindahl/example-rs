@@ -1,12 +1,12 @@
 [package]
-name = "data-structures-rs"
+name = "data_structures"
 version = "0.1.0"
-authors = ["matski@google.com"]
+authors = ["Mats Kindahl <matski@google.com>"]
 edition = "2018"
 
 [dependencies]
 criterion = "0.1.2"
 
 [[bench]]
-name = "insert"
+name = "avl_insert"
 harness = false
