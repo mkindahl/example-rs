@@ -16,7 +16,7 @@
 extern crate criterion;
 extern crate examples;
 
-use data_structures::avl;
+use examples::avl;
 use criterion::Criterion;
 
 fn inserts(n: u32) {
@@ -28,7 +28,7 @@ fn inserts(n: u32) {
 }
 
 fn bench_inserts(c: &mut Criterion) {
-    c.bench_function("mat_inserts 1000", |b| b.iter(|| inserts(1000)));
+    c.bench_function("avl_inserts 1000", |b| b.iter(|| inserts(1000)));
 }
 
 criterion_group!(benches, bench_inserts);
