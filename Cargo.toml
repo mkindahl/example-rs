@@ -10,3 +10,7 @@ criterion = "0.1.2"
 [[bench]]
 name = "avl_insert"
 harness = false
+
+[[bench]]
+name = "expr_simple"
+harness = false

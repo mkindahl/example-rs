@@ -13,3 +13,4 @@
 // permissions and limitations under the License.
 
 pub mod avl;
+pub mod expr;
