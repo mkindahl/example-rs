@@ -1,12 +1,12 @@
-# Data Structures in Rust
+# Rust Examples
 
-This repository contain various examples of Rust data structures and are
-intended to be educational.
+This repository contain various examples of Rust data structures algorithms and
+other gadgets and are mainly intended to be educational.
 
 ## How to build
 
 ``` shell
-git clone https://github.com/mkindahl/data-structures-rs
-cd data-structures-rs
+git clone https://github.com/mkindahl/examples-rs
+cd examples-rs
 cargo build
 ```
