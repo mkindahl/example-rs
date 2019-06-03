@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-extern crate expr;
-
-use expr::eval;
-=======
 // Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License"); you
@@ -20,7 +15,6 @@ use expr::eval;
 extern crate examples;
 
 use examples::expr::eval;
->>>>>>> 2df653b
 use std::collections::HashMap;
 use std::env::args;
 

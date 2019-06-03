@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License"); you
@@ -14,7 +12,6 @@
 // implied.  See the License for the specific language governing
 // permissions and limitations under the License.
 
->>>>>>> 2df653b
 use {Error, Machine, Parser, Result};
 
 #[derive(Debug)]
