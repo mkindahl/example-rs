@@ -20,6 +20,17 @@ edition = "2018"
 
 [dependencies]
 criterion = "0.1.2"
+bytes = "0.4.12"
+futures = "0.1.27"
+tokio = "0.1.21"
+
+[[example]]
+name = "proxy-udp"
+path = "examples/tokio/proxy-udp.rs"
+
+[[example]]
+name = "avl-simple"
+path = "examples/avl/simple.rs"
 
 [[bench]]
 name = "avl_insert"
